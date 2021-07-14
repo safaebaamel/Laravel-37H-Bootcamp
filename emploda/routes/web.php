@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Department;
 use App\Role;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,12 @@ Route::get('/roles/create', [App\Http\Controllers\RoleController::class, 'create
 Route::get('/roles/{id}/edit', [App\Http\Controllers\RoleController::class, 'edit'])->name('roles.edit');
 Route::put('/roles/{id}/edit', [App\Http\Controllers\RoleController::class, 'update'])->name('roles.update');
 Route::delete('/roles/{id}/delete', [App\Http\Controllers\RoleController::class, 'destroy'])->name('roles.destroy');
+
+// Employee User Routes
+
+Route::get('/users/create', [App\Http\Controllers\UserController::class, 'create'])->name('users.create');
+Route::post('/users/create', [App\Http\Controllers\UserController::class, 'store'])->name('users.store');
+Route::get('/users/index', [App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+Route::get('/user/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('users.edit');
+Route::put('/user/{id}/edit', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
+Route::delete('/user/{id}/delete', [App\Http\Controllers\UserController::class, 'destroy'])->name('users.destroy');
