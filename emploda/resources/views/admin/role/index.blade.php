@@ -6,7 +6,7 @@
         <div class="col-md-12 mb-3">
             <nav class="navbar navbar-dark text-wrap bg-dark mb-3">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="{{ route('departments.index') }}">All Departments</a>
+                    <a class="navbar-brand" href="{{ route('roles.index') }}">All Roles</a>
                 </div>
             </nav>
             @if(Session::has('status'))
@@ -26,13 +26,13 @@
 
                 </thead>
                 <tbody>
-                    @if(count($departments)>0)
-                    @foreach ($departments as $key => $department)
+                    @if(count($roles)>0)
+                    @foreach ($roles as $key => $role)
                     <tr>
                         <td>{{$key+1}}</td>
-                        <td>{{$department->name}}</td>
-                        <td>{{$department->description}}</td>
-                        <td><a href="{{route('departments.edit',$department->id)}}"> <i class="fas fa-edit"></i></a>
+                        <td>{{$role->name}}</td>
+                        <td>{{$role->description}}</td>
+                        <td><a href="{{route('roles.edit',$role->id)}}"> <i class="fas fa-edit"></i></a>
                         </td>
                         <td><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
                                     class="fas fa-trash"></i></a>
@@ -42,7 +42,7 @@
                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog">
-                                    <form action="{{ route('departments.destroy', [$department->id]) }}" method="post">
+                                    <form action="{{ route('roles.destroy', [$role->id]) }}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <div class="modal-content">
@@ -67,7 +67,7 @@
         </tr>
         @endforeach
         @else
-        <td> No Department to display </td>
+        <td> No Roles to display </td>
         @endif
         </tbody>
         </table>
