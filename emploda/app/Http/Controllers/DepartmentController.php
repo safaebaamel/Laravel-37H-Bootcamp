@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Department;
+use App\Models\Department;
 
 class DepartmentController extends Controller
 {
@@ -14,7 +14,8 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        //
+        $departments= Department::all();
+        return view('admin.department.index', compact('departments'));
     }
 
     /**
@@ -35,7 +36,12 @@ class DepartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|unique:departments'
+        ]);
+        $data = $request->all();
+        Department::create($data);
+        return redirect()->back()->with('status', 'Department created successfully!');
     }
 
     /**
@@ -57,7 +63,8 @@ class DepartmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $department = Department::find($id);
+        return view('admin.department.edit', compact('department'));
     }
 
     /**
@@ -69,7 +76,10 @@ class DepartmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $department = Department::find($id);
+        $data = $request->all();
+        $department->update($data);
+        return redirect()->route('departments.index')->with('status', 'Record updated Successfully!');
     }
 
     /**
@@ -80,6 +90,7 @@ class DepartmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $department = Department::find($id)->delete();
+        return redirect()->route('departments.index')->with('status', 'Record Deleted Successfully!');
     }
 }

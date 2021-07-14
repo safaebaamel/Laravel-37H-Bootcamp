@@ -14,12 +14,19 @@ use App\Department;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::view('/employee', 'admin.create');
-Route::get('/departments/create', [App\Http\Controllers\DepartmentController::class, 'create']);
+
+// Department Routes
+
+Route::get('/departments/create', [App\Http\Controllers\DepartmentController::class, 'create'])->name('departments.create');
+Route::post('/departments/create', [App\Http\Controllers\DepartmentController::class, 'store'])->name('departments.store');
+Route::get('/departments/index', [App\Http\Controllers\DepartmentController::class, 'index'])->name('departments.index');
+Route::get('/departments/{id}/edit', [App\Http\Controllers\DepartmentController::class, 'edit'])->name('departments.edit');
+Route::put('/departments/{id}/edit', [App\Http\Controllers\DepartmentController::class, 'update'])->name('departments.update');
+Route::delete('/departments/{id}/delete', [App\Http\Controllers\DepartmentController::class, 'destroy'])->name('departments.destroy');
