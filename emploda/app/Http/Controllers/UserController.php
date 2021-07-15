@@ -59,6 +59,7 @@ class UserController extends Controller
             $image = 'avatar2.png';
         }
         $data['image'] = $image;
+        $data['password'] = bcrypt($request->password);
         User::create($data);
         return redirect()->back()->with('status', 'User Created Successfully!');
     }

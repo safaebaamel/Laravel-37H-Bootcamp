@@ -25,7 +25,6 @@
                         <th>Designation</th>
                         <th>Start Date</th>
                         <th>Email</th>
-                        <th>Password</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -43,7 +42,6 @@
                         <td>{{$user->designation}}</td>
                         <td>{{$user->start_from}}</td>
                         <td>{{$user->email}}</td>
-                        <td>{{$user->password}}</td>
                         <td><a href="{{route('users.edit',$user->id)}}"> <i class="fas fa-edit"></i></a>
                         </td>
                         <td><a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i

@@ -1,0 +1,465 @@
+/* Start Global Rules */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+* {
+    -wibkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* End Global Rules */
+body {
+    height: auto;
+}
+
+.container {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Start Style NavBar  */
+
+nav {
+    background-color: #F7F6F6;
+    width: 100%;
+    height: 76px;
+    position:static;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    float: left;
+    padding: 10px;
+    font-size: 18px;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #249ad4;
+    border-bottom-width: medium;
+    
+}
+
+a:hover {
+    color: #249ad4;
+}
+
+#logo {
+    margin: 20px 0 20px 53px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000000;
+    float: left;
+    height: 50px;
+    border: none;
+    display: block;
+}
+
+#btn_signup {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 10px;
+}
+#btn_signup:hover {
+    color: #249ad4;
+}
+
+#logo:hover {
+    text-decoration: none;
+    color: #249ad4;
+}
+
+.links {
+    float: right;
+    padding: 18px;
+}
+
+a .image {
+    display: none;
+}
+
+#menu-icon {
+    display: hidden;
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 960px) {
+    #menu-icon {
+        display: inline-block;
+    }
+    #icon {
+        border: none;
+    }
+
+    .links {
+        padding: 20px 10px;
+    }
+
+    #logo {
+        margin: 20px 0 20px 23px; 
+    }
+
+    .links ul {
+
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background-color: #ffffff;
+        top: 76px;
+        right: 10px;
+        width: 40%;
+
+    }
+
+    .links:hover ul {
+        display: block;
+
+    }
+
+    .links li {
+        text-align: center;
+        width: 100%;
+        padding: 15px 0;
+        margin: 0;
+    }
+
+}
+
+/* End Style NavBar  */
+
+/* Header Css */
+
+.fade-carousel .carousel-inner .item {
+    height: 80vh;
+}
+
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+.hero h1 {
+    font-size: 6em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #249ad4;
+    border-color: #249ad4;
+    outline: none;
+    font-size: 20px;
+    margin: 20px auto;
+}
+
+.fade-carousel .slides .slide-1, 
+.fade-carousel .slides .slide-2,
+.fade-carousel .slides .slide-3 {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.fade-carousel .slides .slide-1 {
+  background-image: url(https://images.unsplash.com/photo-1563986768817-257bf91c5753?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1085&q=80); 
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 972px){
+    .hero { width: 980px; margin-left: auto;
+        margin-right: auto; }    
+}
+@media screen and (max-width: 640px){
+    .hero h1 { font-size: 4em; }    
+}
+
+/* Our Services */
+
+/* Main Section Code Below */
+
+div#services {
+    background: #f7f6f6;
+    text-align: center;
+    font-family: 'Metal Mania';
+    padding: 25px;
+    height: auto;
+    overflow: hidden;
+}
+
+.ServiceInner h1 {
+    font-size: 55px;
+    text-align: center;
+    padding: 10px;
+}
+
+.ServiceInner p {
+    font-size: 25px;
+    letter-spacing: 3px;
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1450px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .service-cards {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+  }
+}
+
+.service-card {
+    background-color: #F5F5F5;
+    box-shadow: 5px 5px 20px 0px rgba(77, 139, 168, 0.16);
+    padding: 40px 20px 40px 20px;
+    border-radius: 10px;
+}
+.service-card:hover {
+    border-color: #249ad4;
+
+}
+
+.service-card h3 {
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 35px;
+  margin: 10px 0 10px 0;
+  color: #707070;
+}
+
+/* .ux {
+  border-top: 20px solid #FFAED7;
+}
+
+.ui {
+  border-top: 20px solid #FFAED7;
+}
+
+.interaction {
+  border-top: 20px solid #FFAED7;
+}
+
+.front-end {
+  border-top: 20px solid #FFAED7;
+} */
+
+
+/* Testimonial */
+#testimonials {
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#testimonials h1 {
+    font-size: 45px;
+    text-align: center;
+    padding: 48px 10px 10px 10px;
+} 
+.snip1533 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #757070;
+  display: inline-block;
+  font-size: 16px;
+  margin: 35px 10px 10px;
+  max-width: 310px;
+  min-width: 250px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-top: 5px solid #249ad4;
+}
+
+.snip1533 *,
+.snip1533 *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.snip1533 figcaption {
+  padding: 23% 10% 12%;
+}
+
+.snip1533 figcaption:before {
+  -webkit-transform: translateX(-40%);
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #249ad4;
+  content: "\f10e";
+  font-family: 'FontAwesome';
+  font-size: 32px;
+  font-style: normal;
+  left: 50%;
+  line-height: 60px;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+}
+
+.snip1533 h3 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 10px 0 5px;
+}
+
+.snip1533 h4 {
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.snip1533 blockquote {
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+
+
+
+
+/* footer */
+
+
+.footer-container {
+    background-color: #212329;
+    padding: 2rem 0;
+    text-decoration: none;
+    margin-bottom: none;
+}
+
+.footer {
+    width: 80%;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+.footer-heading h2 {
+    margin-bottom: 2rem;
+    text-decoration: lightgray;
+}
+
+.footer-heading a {
+    color: #fff;
+    text-decoration: none;
+    border:none;
+    line-height: 1.6;
+    
+}
+
+.footer-heading a:hover {
+    color: #249ad4;
+    transition: 0.3s ease-out;
+}
+
+.footer-email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-email-form h2 {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+#footer-email {
+    width: 250px;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#footer-email::placeholder {
+    color: #b1b1b1;
+}
+
+#footer-email-btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #249ad4;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}
+
+#footer-email-btn:hover {
+    cursor: pointer;
+    background-color: #1da7ec;
+    transition: all 0.4s ease-out;
+}

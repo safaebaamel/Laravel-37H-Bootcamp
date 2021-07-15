@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Department;
 use App\Role;
 use App\User;
+use App\Permission;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,12 @@ use App\User;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homePage');
 });
+
+Route::get('/admin', function () {
+    return view('welcome');
+})->name('admin');
 
 Auth::routes();
 
@@ -50,3 +55,17 @@ Route::get('/users/index', [App\Http\Controllers\UserController::class, 'index']
 Route::get('/user/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('users.edit');
 Route::put('/user/{id}/edit', [App\Http\Controllers\UserController::class, 'update'])->name('users.update');
 Route::delete('/user/{id}/delete', [App\Http\Controllers\UserController::class, 'destroy'])->name('users.destroy');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Permission Routes
+
+
+Route::get('/permissions/create', [App\Http\Controllers\PermissionController::class, 'create'])->name('permissions.create');
+Route::post('/permissions/create', [App\Http\Controllers\PermissionController::class, 'store'])->name('permissions.store');
+Route::get('/permissions/index', [App\Http\Controllers\PermissionController::class, 'index'])->name('permissions.index');
+Route::get('/permission/{id}/edit', [App\Http\Controllers\PermissionController::class, 'edit'])->name('permissions.edit');
+Route::put('/permission/{id}/edit', [App\Http\Controllers\PermissionController::class, 'update'])->name('permissions.update');
+Route::delete('/permission/{id}/delete', [App\Http\Controllers\PermissionController::class, 'destroy'])->name('permissions.destroy');
