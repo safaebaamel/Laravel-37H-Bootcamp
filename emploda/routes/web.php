@@ -93,3 +93,10 @@ Route::post('/notices/create', [App\Http\Controllers\NoticeController::class, 's
 Route::get('/notices/{id}/edit', [App\Http\Controllers\NoticeController::class, 'edit'])->name('notices.edit');
 Route::put('/notices/{id}/edit', [App\Http\Controllers\NoticeController::class, 'update'])->name('notices.update');
 Route::delete('/notices/{id}/delete', [App\Http\Controllers\NoticeController::class, 'destroy'])->name('notices.destroy');
+
+
+// Mail Routes
+
+Route::get('/mails/index', [App\Http\Controllers\MailController::class, 'index'])->name('mails.index');
+Route::get('/mails/create', [App\Http\Controllers\MailController::class, 'create'])->name('mails.create');
+Route::post('/mails/create', [App\Http\Controllers\MailController::class, 'store'])->name('mails.store');
