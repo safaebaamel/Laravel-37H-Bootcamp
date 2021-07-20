@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Permission;
+use App\Models\Leave;
 
-class PermissionController extends Controller
+class LeaveController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        $permissions= Permission::get();
-        return view('admin.permission.index', compact('permissions'));
+
     }
 
     /**
@@ -25,7 +24,8 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        return view('admin.permission.create');
+        $leaves = Leave::latest()->where('user_id', auth()->user()->id)->get();
+        return view('admin.leave.create', compact('leaves'));
     }
 
     /**
@@ -37,12 +37,17 @@ class PermissionController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'role_id'=>'required',
+            'from' => 'required',
+            'to' => 'required',
+            'description' => 'required',
+            'type' => 'required',
         ]);
         $data = $request->all();
-        // dd($data);
-        Permission::create($data);
-        return redirect()->back()->with('status', 'Permessions Updated!');
+        $data['user_id'] = auth()->user()->id;
+        $data['message'] = '';
+        $data['status'] = 0;
+        Leave::create($data);
+        return redirect()->back()->with('status', 'Leave created successfully!');
     }
 
     /**
@@ -64,8 +69,8 @@ class PermissionController extends Controller
      */
     public function edit($id)
     {
-        $permission = Permission::find($id);
-        return view('admin.permission.edit', compact('permission'));
+        $leave = Leave::find($id);
+        return view('admin.leave.edit', compact('leave'));
     }
 
     /**
@@ -77,10 +82,10 @@ class PermissionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $permission = Permission::find($id);
+        $leave = Leave::find($id);
         $data = $request->all();
-        $permission->update($data);
-        return redirect()->route('permissions.index')->with('status', 'Record updated Successfully!');
+        $leave->update($data);
+        return redirect()->route('leaves.create')->with('status', 'Leave updated Successfully!');
     }
 
     /**
@@ -91,19 +96,7 @@ class PermissionController extends Controller
      */
     public function destroy($id)
     {
-        $permission = Permission::find($id)->delete();
-        return redirect()->route('permissions.index')->with('status', 'Permission Deleted Successfully!');
+        $leave = Leave::find($id)->delete();
+        return redirect()->route('leaves.create')->with('status', 'Leave Deleted Successfully!');
     }
-
-    // public function destroy($id) {
-    //     try {
-    //       $permission = Permission::where('id',$id)->first();
-    //     } catch (ModelNotFoundException $e) {
-    //       return redirect()->route('permissions.index')->with(['status'=> 'Failed']);
-    //     }
-
-    //     $permission->delete();
-
-    //     return redirect()->route('permissions.index')->with(['status'=> 'Successfully deleted!!']);
-    //   }
 }

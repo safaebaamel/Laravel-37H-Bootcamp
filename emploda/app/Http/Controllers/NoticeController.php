@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Permission;
+use App\Models\Notice;
 
-class PermissionController extends Controller
+class NoticeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class PermissionController extends Controller
      */
     public function index()
     {
-        $permissions= Permission::get();
-        return view('admin.permission.index', compact('permissions'));
+    //     $notice= Notice::all();
+    //     return view('admin.notice.index', compact('notice'));
     }
 
     /**
@@ -25,7 +25,7 @@ class PermissionController extends Controller
      */
     public function create()
     {
-        return view('admin.permission.create');
+        return view('admin.notice.create');
     }
 
     /**
@@ -36,13 +36,7 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'role_id'=>'required',
-        ]);
-        $data = $request->all();
-        // dd($data);
-        Permission::create($data);
-        return redirect()->back()->with('status', 'Permessions Updated!');
+        //
     }
 
     /**
@@ -64,8 +58,7 @@ class PermissionController extends Controller
      */
     public function edit($id)
     {
-        $permission = Permission::find($id);
-        return view('admin.permission.edit', compact('permission'));
+        //
     }
 
     /**
@@ -77,10 +70,7 @@ class PermissionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $permission = Permission::find($id);
-        $data = $request->all();
-        $permission->update($data);
-        return redirect()->route('permissions.index')->with('status', 'Record updated Successfully!');
+        //
     }
 
     /**
@@ -91,19 +81,6 @@ class PermissionController extends Controller
      */
     public function destroy($id)
     {
-        $permission = Permission::find($id)->delete();
-        return redirect()->route('permissions.index')->with('status', 'Permission Deleted Successfully!');
+        //
     }
-
-    // public function destroy($id) {
-    //     try {
-    //       $permission = Permission::where('id',$id)->first();
-    //     } catch (ModelNotFoundException $e) {
-    //       return redirect()->route('permissions.index')->with(['status'=> 'Failed']);
-    //     }
-
-    //     $permission->delete();
-
-    //     return redirect()->route('permissions.index')->with(['status'=> 'Successfully deleted!!']);
-    //   }
 }

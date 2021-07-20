@@ -21,9 +21,9 @@ Route::get('/', function () {
     return view('homePage');
 });
 
-Route::get('/admin', function () {
+Route::get('/admin/home', function () {
     return view('welcome');
-})->name('admin');
+})->name('admin')->middleware('auth');
 
 Auth::routes();
 
@@ -69,3 +69,22 @@ Route::get('/permissions/index', [App\Http\Controllers\PermissionController::cla
 Route::get('/permission/{id}/edit', [App\Http\Controllers\PermissionController::class, 'edit'])->name('permissions.edit');
 Route::put('/permission/{id}/edit', [App\Http\Controllers\PermissionController::class, 'update'])->name('permissions.update');
 Route::delete('/permission/{id}/delete', [App\Http\Controllers\PermissionController::class, 'destroy'])->name('permissions.destroy');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Leave Routes
+
+Route::get('/leaves/create', [App\Http\Controllers\LeaveController::class, 'create'])->name('leaves.create');
+Route::post('/leaves/create', [App\Http\Controllers\LeaveController::class, 'store'])->name('leaves.store');
+Route::get('/leaves/index', [App\Http\Controllers\LeaveController::class, 'index'])->name('leaves.index');
+Route::get('/leave/{id}/edit', [App\Http\Controllers\LeaveController::class, 'edit'])->name('leaves.edit');
+Route::put('/leave/{id}/edit', [App\Http\Controllers\LeaveController::class, 'update'])->name('leaves.update');
+Route::delete('/leave/{id}/delete', [App\Http\Controllers\LeaveController::class, 'destroy'])->name('leaves.destroy');
+
+
+// Notice Routes
+
+Route::get('/notices/index', [App\Http\Controllers\NoticeController::class, 'index'])->name('notices.index');
+Route::get('/notices/create', [App\Http\Controllers\NoticeController::class, 'create'])->name('notices.create');

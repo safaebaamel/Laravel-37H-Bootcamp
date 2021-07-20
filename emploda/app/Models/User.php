@@ -28,6 +28,7 @@ class User extends Authenticatable
         'designation',
         'role_id',
         'image',
+        'is_admin',
         'start_from'
     ];
 

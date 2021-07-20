@@ -52,7 +52,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Start Date</label>
-                            <input type="date" name="start_from" class="form-control" required value="">
+                            <input placeholder="dd-mm-yy" name="start_from" class="form-control" required id="datepicker">
 
                         </div>
                         <div class="form-group">
