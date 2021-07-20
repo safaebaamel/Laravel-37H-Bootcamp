@@ -60,6 +60,15 @@
                                     <td> <input type="checkbox" name="name[user][can-delete]" @if(isset($permission['name']['user']['can-delete'])) checked @endif  value="1"> </td>
                                     <td> <input type="checkbox" name="name[user][can-list]" @if(isset($permission['name']['user']['can-list'])) checked @endif  value="1"> </td>
                                 </tr>
+                                <tr>
+                                    <td> Leave </td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> <input type="checkbox" name="name[leave][can-list]" @if(isset($permission['name']['leave']['can-list'])) checked @endif  value="1"> </td>
+                                </tr>
                             </tbody>
                         </table>
                         <button type="submit" class="btn btn-primary" >Update</button>

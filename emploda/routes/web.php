@@ -82,6 +82,7 @@ Route::get('/leaves/index', [App\Http\Controllers\LeaveController::class, 'index
 Route::get('/leave/{id}/edit', [App\Http\Controllers\LeaveController::class, 'edit'])->name('leaves.edit');
 Route::put('/leave/{id}/edit', [App\Http\Controllers\LeaveController::class, 'update'])->name('leaves.update');
 Route::delete('/leave/{id}/delete', [App\Http\Controllers\LeaveController::class, 'destroy'])->name('leaves.destroy');
+Route::post('/accept-reject-leave/{id}', [App\Http\Controllers\LeaveController::class, 'acceptReject'])->name('accept.reject');
 
 
 // Notice Routes

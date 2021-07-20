@@ -83,10 +83,12 @@
                         <td>{{ $leave->type }}</td>
                         <td>{{ $leave->description }}</td>
                         <td>
-                            @if($leave->status==0)
+                        @if($leave->status==0)
                                 <span class="alert alert-danger m-0 p-1"> Pending </span>
+                            @elseif($leave->status==1)
+                                <span class="alert alert-success m-0 p-1"> Approved </span>
                             @else
-                                <span class="alert alert-danger m-0 p-1"> Approved </span>
+                                <span class="alert alert-primary m-0 p-1"> Rejected </span>
                             @endif
                         </td>
                         <td>{{ $leave->reply }}</td>

@@ -21,7 +21,7 @@ class CreateLeavesTable extends Migration
             $table->string('type');
             $table->string('description');
             $table->integer('status')->default(0);
-            $table->text('message');
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }

@@ -14,7 +14,8 @@ class LeaveController extends Controller
      */
     public function index()
     {
-
+        $leaves = Leave::latest()->get();
+        return view('admin.leave.index', compact('leaves'));
     }
 
     /**
@@ -98,5 +99,16 @@ class LeaveController extends Controller
     {
         $leave = Leave::find($id)->delete();
         return redirect()->route('leaves.create')->with('status', 'Leave Deleted Successfully!');
+    }
+
+    public function acceptReject(Request $request, $id) {
+        $status = $request->status;
+        $message = $request->message;
+        $leave = Leave::find($id);
+        $leave->update([
+            'status' => $status,
+            'message' => $message,
+        ]);
+        return redirect()->route('leaves.index')->with('status', 'Leave Updated Successfully!');
     }
 }
