@@ -14,8 +14,8 @@ class NoticeController extends Controller
      */
     public function index()
     {
-    //     $notice= Notice::all();
-    //     return view('admin.notice.index', compact('notice'));
+        $notices = Notice::latest()->get();
+        return view('admin.notice.index', compact('notices'));
     }
 
     /**
@@ -36,7 +36,14 @@ class NoticeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'date' => 'required',
+            'name' => 'required',
+        ]);
+        Notice::create($request->all());
+        return redirect()->back()->with('status', 'Notice created successfully!');
     }
 
     /**
@@ -58,7 +65,8 @@ class NoticeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $notice = Notice::find($id);
+        return view('admin.notice.edit', compact('notice'));
     }
 
     /**
@@ -70,7 +78,10 @@ class NoticeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $notice = Notice::find($id);
+        $data = $request->all();
+        $notice->update($data);
+        return redirect()->route('notices.index')->with('status', 'Record updated Successfully!');
     }
 
     /**
@@ -81,6 +92,7 @@ class NoticeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $notice = Notice::find($id)->delete();
+        return redirect()->route('notices.index')->with('status', 'Notice Deleted Successfully!');
     }
 }

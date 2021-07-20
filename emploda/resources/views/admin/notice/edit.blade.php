@@ -9,15 +9,16 @@
                     {{ Session::get('status') }}
                 </div>
             @endif
-            <form action="{{ route('notices.store') }}" method="post">
+            <form action="{{ route('notices.update', [$notice->id]) }}" method="post">
                 @csrf
+                @method('PUT')
                 <div class="card ">
-                    <div class="card-header"> Create New Notice </div>
+                    <div class="card-header"> Update Notice </div>
 
                     <div class="card-body">
                         <div class="form-group">
                             <label for=""> Title  </label>
-                            <input type="text" name="title" class="form-control mb-2 @error('title') is-invalid @enderror" >
+                            <input type="text" name="title" value="{{ $notice->title }}" class="form-control mb-2 @error('title') is-invalid @enderror" >
                             @error('title')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -26,7 +27,7 @@
                         </div>
                         <div class="form-group">
                             <label for=""> Description </label>
-                            <textarea type="text" name="description" class="form-control @error('description') is-invalid @enderror mb-2"> </textarea>
+                            <textarea type="text" name="description" value="{{ $notice->description }}" class="form-control @error('description') is-invalid @enderror mb-2">{{ $notice->description }} </textarea>
                             @error('description')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -44,7 +45,7 @@
                         </div>
                         <div class="form-group">
                             <label for=""> Created By</label>
-                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" required value="{{ auth()->user()->firstname }}" >
+                            <input type="text" name="name" value="{{ $notice->name }}" class="form-control @error('name') is-invalid @enderror" required value="{{ auth()->user()->firstname }}" >
                             @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -53,7 +54,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary" >Submit</button>
+                            <button type="submit" class="btn btn-primary" >Update</button>
                         </div>
                     </div>
                 </div>

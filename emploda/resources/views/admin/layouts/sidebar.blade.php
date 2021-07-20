@@ -86,10 +86,19 @@
                             <a class="nav-link" href="{{ route('leaves.index') }}"> Approve/Reject </a>
                         </nav>
                     </div>
-                    <a class="nav-link" href="{{ route('notices.create') }}">
-                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                        Notice
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsss"
+                        aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-bolt"></i></div>
+                        Staff Notice
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
+                    <div class="collapse" id="collapseLayoutsss" aria-labelledby="headingOne"
+                        data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{ route('notices.create') }} "> Create </a>
+                            <a class="nav-link" href="{{ route('notices.index') }}"> View </a>
+                        </nav>
+                    </div>
                 </div>
             </div>
             <div class="sb-sidenav-footer">

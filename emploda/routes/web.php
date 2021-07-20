@@ -89,3 +89,7 @@ Route::post('/accept-reject-leave/{id}', [App\Http\Controllers\LeaveController::
 
 Route::get('/notices/index', [App\Http\Controllers\NoticeController::class, 'index'])->name('notices.index');
 Route::get('/notices/create', [App\Http\Controllers\NoticeController::class, 'create'])->name('notices.create');
+Route::post('/notices/create', [App\Http\Controllers\NoticeController::class, 'store'])->name('notices.store');
+Route::get('/notices/{id}/edit', [App\Http\Controllers\NoticeController::class, 'edit'])->name('notices.edit');
+Route::put('/notices/{id}/edit', [App\Http\Controllers\NoticeController::class, 'update'])->name('notices.update');
+Route::delete('/notices/{id}/delete', [App\Http\Controllers\NoticeController::class, 'destroy'])->name('notices.destroy');
