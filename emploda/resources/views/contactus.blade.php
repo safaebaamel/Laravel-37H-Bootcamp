@@ -1,4 +1,3 @@
 @include('layouts.navbar')
-
-@include('layouts.landingPage')
+@include('layouts.contact')
 @include('layouts.footer')

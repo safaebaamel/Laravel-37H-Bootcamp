@@ -19,11 +19,23 @@ use App\Permission;
 
 Route::get('/', function () {
     return view('homePage');
-});
+})->name('landingpage');
 
 Route::get('/admin/home', function () {
     return view('welcome');
 })->name('admin')->middleware('auth');
+
+Route::get('/home/about', function () {
+    return view('aboutus');
+})->name('aboutus');
+
+Route::get('/home/ourCommunity', function () {
+    return view('ourCommunity');
+})->name('ourCommunity');
+
+Route::get('/home/contactus', function () {
+    return view('contactus');
+})->name('contactus');
 
 Auth::routes();
 

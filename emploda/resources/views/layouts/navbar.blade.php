@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emploda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('template/Style/style.css')}}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -20,14 +21,14 @@
     <!-- Navbar -->
     <nav>
         <div class="container">
-            <a htrf="#" id="logo">Emploda</a>
+            <a href="#" id="logo">Emploda</a>
             <div class="links">
                 <a id="icon" href="#"><img id="menu-icon" class="image" src="Assets/Imgs/menu.png" alt="icon"></a>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Find an Expert</a></li>
-                    <li><a href="#">Become an Expert</a></li>
-                    <li><a href="#">Our Community</a></li>
+                    <li><a href="{{ route('landingpage') }}">Home</a></li>
+                    <li><a href="{{ route('aboutus') }}">About Us</a></li>
+                    <li><a href="{{ route('ourCommunity') }}">Our Community</a></li>
+                    <li><a href="{{ route('contactus') }}">Contact Us</a></li>
                     <li><a id="btn_signup" href="{{ route('admin') }}">Log In</a></li>
                 </ul>
             </div>

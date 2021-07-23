@@ -3,9 +3,9 @@
     * Copyright 2013-2021 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
     */
-    // 
+    //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -22,5 +22,26 @@ window.addEventListener('DOMContentLoaded', event => {
             localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
         });
     }
+
+});
+
+
+$(function() {
+
+    "use strict";
+
+    $(".pricicing-table .heden-title .plans .plan").on("click", function() {
+        $(this).siblings(".bg-active").css("transform","translateX(" + $(this).position().left + "px)");
+        $(".section-pricing .plans .plan").css("color","#61648f");
+        $(this).css("color","#fff");
+        if($(this).hasClass("yearly")) {
+            $(".pricicing-table .content .sallry .price").css("opacity",0);
+            $(".pricicing-table .content .sallry .yearly-price").css("opacity",1);
+        }
+        else {
+            $(".pricicing-table .content .sallry .price").css("opacity",0);
+            $(".pricicing-table .content .sallry .monthly-price").css("opacity",1);
+        }
+    });
 
 });
