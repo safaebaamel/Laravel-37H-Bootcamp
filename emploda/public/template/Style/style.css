@@ -8,7 +8,6 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    cursor: cell;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -636,6 +635,7 @@ form footer a:hover {
 #fun-facts .fact-item {
 	background-color: #f4f4f4;
 	padding: 30px;
+    border-radius: 80px;
 	text-align: center;
 }
 
@@ -661,7 +661,7 @@ form footer a:hover {
 	color: #fff;
     font-size: 35px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 45px;
 }
 
 #contact .section-heading .line-dec {

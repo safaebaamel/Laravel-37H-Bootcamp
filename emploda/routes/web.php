@@ -37,6 +37,8 @@ Route::get('/home/contactus', function () {
     return view('contactus');
 })->name('contactus');
 
+// Route::post('logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
