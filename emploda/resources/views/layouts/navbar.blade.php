@@ -27,7 +27,7 @@
                 <ul>
                     <li><a href="{{ route('landingpage') }}">Home</a></li>
                     <li><a href="{{ route('aboutus') }}">About Us</a></li>
-                    <li><a href="{{ route('contactus') }}">Contact Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
                     <li><a id="btn_signup" href="{{ route('admin') }}">Log In</a></li>
                 </ul>
             </div>

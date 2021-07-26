@@ -3,8 +3,3 @@
 
 @include('layouts.footer')
 
-<style >
-
-
-
-</style>
