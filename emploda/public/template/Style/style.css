@@ -154,6 +154,7 @@ a .image {
     top: 50%;
     left: 50%;
     z-index: 3;
+    padding: 0;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
@@ -171,6 +172,9 @@ a .image {
     padding: 0;
 }
 
+#ov {
+    overflow:visible;
+}
 
 .btn.btn-lg {padding: 10px 40px;}
 .btn.btn-hero,
@@ -277,23 +281,6 @@ div#services {
   margin: 10px 0 10px 0;
   color: #707070;
 }
-
-/* .ux {
-  border-top: 20px solid #FFAED7;
-}
-
-.ui {
-  border-top: 20px solid #FFAED7;
-}
-
-.interaction {
-  border-top: 20px solid #FFAED7;
-}
-
-.front-end {
-  border-top: 20px solid #FFAED7;
-} */
-
 
 /* Testimonial */
 #testimonials {
@@ -469,7 +456,6 @@ div#services {
 
 
 form {
-	/* background-image: url('https://c4.wallpaperflare.com/wallpaper/978/251/660/digital-art-abstract-wallpaper-preview.jpg'); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 0 30px;
@@ -623,9 +609,117 @@ form footer a:hover {
 	}
 }
 
-/* PAGE 3 */
+/* PAGE 2 */
 
 /* FUN FACTS */
+
+#btn-abt {
+    border-bottom: none;
+
+}
+
+#about {
+	background-color: #f4f4f4;
+	padding: 80px 0px;
+}
+
+#about .section-heading {
+	margin-bottom: 60px;
+}
+
+.service-item {
+	cursor: pointer;
+	background-color: #fff;
+	text-align: center;
+	padding: 30px 20px;
+	transition: all 0.7s;
+	box-shadow: 0px 0px 15px #cdcdcd;
+}
+
+.service-item:hover {
+	background-color: #249ad4;
+}
+
+.service-item h4 {
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin-bottom: 15px;
+	margin-top: 25px;
+}
+
+.service-item:hover h4 {
+	color: #fff;
+}
+
+.service-item:hover p {
+	color: #fff;
+}
+
+.first-service .icon {
+	height: 32px;
+	width: 32px;
+	display: inline-block;
+    color: black;
+}
+
+
+
+.second-service .icon {
+	height: 32px;
+	width: 22px;
+	display: inline-block;
+}
+
+
+.third-service .icon {
+	height: 32px;
+	width: 32px;
+	display: inline-block;
+}
+
+
+.fourth-service .icon {
+	height: 32px;
+	width: 32px;
+	display: inline-block;
+}
+
+#what-we-do {
+	background-image: url('https://images.unsplash.com/photo-1487875961445-47a00398c267?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 80px 0px;
+    background-position: center;
+
+	color: #fff;
+}
+
+#what-we-do .right-image img {
+	width: 100%;
+	overflow: hidden;
+}
+
+#what-we-do h4 {
+	font-size: 24px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	line-height: 30px;
+	margin-bottom: 25px;
+}
+
+#what-we-do p {
+	margin-bottom: 30px;
+	color: #fff;
+}
+
+#what-we-do ul li {
+	display: inline-block;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
 
 #fun-facts {
 	padding: 100px 0px;
@@ -637,6 +731,7 @@ form footer a:hover {
 	padding: 30px;
     border-radius: 80px;
 	text-align: center;
+    margin: 10px;
 }
 
 .fact-item .counter {
@@ -673,14 +768,17 @@ form footer a:hover {
 }
 
 #contact {
-	background-color: black;
+	background-color: rgb(0, 0, 0);
 	background-repeat: no-repeat;
 	width: 100%;
-    padding: 0;
+    margin: 0px;
 	background-size: cover;
+    padding-bottom: 30px;
 }
 
 #contact .map img {
+    padding-bottom: 10px;
+
 	width: 90%;
 	overflow: hidden;
 }
@@ -689,8 +787,8 @@ form footer a:hover {
 	border-radius: 0px;
 	padding-left: 15px;
 	font-size: 13px;
-	color: #fff;
-	background-color: rgba(250, 250, 250, 0.1);
+	color: rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
 	outline: none;
 	border: none;
 	box-shadow: none;
@@ -704,8 +802,8 @@ form footer a:hover {
 	border-radius: 0px;
 	padding-left: 15px;
 	font-size: 13px;
-	color: #fff;
-	background-color: rgba(250, 250, 250, 0.1);
+	color: rgb(0, 0, 0);
+	background-color: rgb(250, 250, 250);
 	outline: none;
 	border: none;
 	box-shadow: none;

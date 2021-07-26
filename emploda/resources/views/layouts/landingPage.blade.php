@@ -2,7 +2,7 @@
    <div class="fade-carousel" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-ride="carousel"
         data-interval="4000" id="bs-carousel">
         <!-- Wrapper for slides -->
-        <div class="carousel-inner">
+        <div class="carousel-inner" id="ov">
             <div class="item slides active">
                 <div class="slide-1">
                     <div class="overlay"></div>
