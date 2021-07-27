@@ -114,8 +114,4 @@ class UserController extends Controller
         return redirect()->route('users.index')->with('status', 'User Deleted Successfully!');
     }
 
-    public function logout(Request $request) {
-        Auth::logout();
-        return redirect('/login');
-    }
 }

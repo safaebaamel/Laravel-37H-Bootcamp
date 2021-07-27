@@ -45,7 +45,7 @@
                         </div>
                         <div class="form-group">
                             <label for=""> Created By</label>
-                            <input type="text" name="name" value="{{ $notice->name }}" class="form-control @error('name') is-invalid @enderror" required value="{{ auth()->user()->firstname }}" >
+                            <input type="text" name="name" value="{{ $notice->name }}" class="form-control @error('name') is-invalid @enderror" required value="{{session()->has('firstname')}}" >
                             @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

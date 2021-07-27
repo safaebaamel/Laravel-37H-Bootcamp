@@ -4,7 +4,7 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Main</div>
-                    <a class="nav-link" href="{{ url('/admin/home') }}">
+                    <a class="nav-link" href="{{ url('/admin/dashboard') }}">
                         <div class="sb-nav-link-icon"><i class="fas fa-address-book"></i></div>
                         Dashboard
                     </a>
@@ -116,7 +116,6 @@
             </div>
             <div class="sb-sidenav-footer">
                 <div class="small">Logged in as:</div>
-                Admin?
             </div>
         </nav>
     </div>

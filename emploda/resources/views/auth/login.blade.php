@@ -1,6 +1,5 @@
 @include('layouts.navbar')
-
-@include('layouts.login')
+@include('auth.layouts.loginContent')
 @include('layouts.footer')
 
 <style>
@@ -10,16 +9,17 @@
     margin: 0;
     box-sizing: border-box;
 }
+#btnn {
+    background-color: #249AD4;
+    border-color: white;
+}
 
 form {
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
     padding: 0 0;
     margin : 0 0 0 0;
     margin-bottom: 80px;
     background-color: white;
     display: inline-block;
-    /* justify-content: center; */
     box-shadow: none;
     width: 500px;
     max-width: 100%;
@@ -66,6 +66,10 @@ img {
     background: #004cfe;
     border-radius: 4px;
     font-weight: bold;
+}
+
+.btn-primary {
+    color: black;
 }
 
 .btn1:hover {

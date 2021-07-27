@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Leave;
+use App\Models\User;
 
 class LeaveController extends Controller
 {
@@ -25,7 +26,7 @@ class LeaveController extends Controller
      */
     public function create()
     {
-        $leaves = Leave::latest()->where('user_id', auth()->user()->id)->get();
+        $leaves = Leave::latest()->where('user_id', session()->has('id'))->get();
         return view('admin.leave.create', compact('leaves'));
     }
 
@@ -44,7 +45,7 @@ class LeaveController extends Controller
             'type' => 'required',
         ]);
         $data = $request->all();
-        $data['user_id'] = auth()->user()->id;
+        $data['user_id'] = session()->has('id');
         $data['message'] = '';
         $data['status'] = 0;
         Leave::create($data);

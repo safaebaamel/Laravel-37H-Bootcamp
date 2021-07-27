@@ -20,14 +20,14 @@
     <!-- Navbar -->
     <nav>
         <div class="container">
-            <a href="{{ route('landingpage') }}" id="logo">Emploda</a>
+            <a href="#" id="logo">Emploda</a>
             <div class="links">
                 <a id="icon" href="#"><img id="menu-icon" class="image" src="{{asset('template/assets/img/menu.png')}}" alt="icon"></a>
                 <ul>
-                    <li><a href="{{ route('landingpage') }}">Home</a></li>
-                    <li><a href="{{ route('aboutus') }}">About Us</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                    <li><a id="btn_signup" href="{{ route('login') }}">Log In</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a id="btn_signup" href="">Log In</a></li>
                 </ul>
             </div>
         </div>

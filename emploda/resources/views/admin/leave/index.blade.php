@@ -29,7 +29,7 @@
                 <tbody>
                     @foreach($leaves as $leave)
                     <tr>
-                        <th scope="row">{{ $leave->user->firstname }}</th>
+                        <th scope="row">{{ session()->has('firstname') }}</th>
                         <td>{{ $leave->from }}</td>
                         <td>{{ $leave->to }}</td>
                         <td>{{ $leave->type }}</td>
