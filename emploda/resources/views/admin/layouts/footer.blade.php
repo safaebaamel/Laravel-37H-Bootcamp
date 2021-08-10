@@ -1,7 +1,7 @@
-<footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Made with &#10084; Sbaamel</div>
+<footer class="py-4 bg-light mt-auto text-center">
+                    <div class="container-fluid px-4 text-center">
+                        <div class="d-flex align-items-center text-center justify-content-between small">
+                            <div class="text-muted text-center">Made with &#10084; by Sbaamel</div>
                         </div>
                     </div>
                 </footer>

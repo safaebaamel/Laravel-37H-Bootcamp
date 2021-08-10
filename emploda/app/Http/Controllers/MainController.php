@@ -19,12 +19,13 @@ class MainController extends Controller
         ]);
         $userInfo = User::where('email','=', $request->email)->first();
         if (!$userInfo) {
-            return back()->with('message', 'we don not recognize your email');
+            return back()->with('message', 'we do not recognize your email');
         } else {
             if (Hash::check($request->password, $userInfo->password)) {
                 $request->session()->put('loggedUser', $userInfo->id);
                 $request->session()->put('id', $userInfo->id);
                 $request->session()->put('firstname', $userInfo->firstname);
+                $request->session()->put('is_admin', $userInfo->is_admin);
                 return redirect('admin/dashboard');
             } else {
             return back()->with('message', 'we don not recognize your password');

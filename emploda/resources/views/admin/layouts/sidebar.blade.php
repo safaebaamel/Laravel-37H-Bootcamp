@@ -76,7 +76,7 @@
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutss"
                         aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-bolt"></i></div>
-                        Staff Leaves
+                        Vacation Leaves
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
                     <div class="collapse" id="collapseLayoutss" aria-labelledby="headingOne"
@@ -89,7 +89,7 @@
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsss"
                         aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-bolt"></i></div>
-                        Staff Notice
+                        Declarations
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
                     <div class="collapse" id="collapseLayoutsss" aria-labelledby="headingOne"
@@ -115,7 +115,7 @@
                 </div>
             </div>
             <div class="sb-sidenav-footer">
-                <div class="small">Logged in as:</div>
+                <div class="small">Logged in as: <span class="btn-outline-primary">{{ session('firstname') }}</span></div>
             </div>
         </nav>
     </div>
