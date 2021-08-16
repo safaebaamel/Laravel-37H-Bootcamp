@@ -14,7 +14,7 @@
                 {{ Session::get('status') }}
             </div>
             @endif
-            <table id="datatablesSimple">
+            <table class="table" id="datatablesSimple">
                 <thead>
                     <tr>
                         <th>SN</th>
