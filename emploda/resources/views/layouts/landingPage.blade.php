@@ -31,9 +31,12 @@
             <div class="service-cards" data-aos="fade-down">
                 <div class="service-card ux">
                     <i class="fas fa-american-sign-language-interpreting"></i>
-                    <h3>Profiles & Resume</h3>
-                    <p>Get to know the service providers by studying their profiles and reviews and choose that suits
-                        you best.</p>
+                    <h3>Secured App</h3>
+                    <p>Our Application is high secured, written by a team of high skilled developpers.</p>
+                </div>
+                <div class="service-card ui">
+                    <h3>Free Platform</h3>
+                    <p>We offer free of charge registration and there are no hidden fees. You can manage your Employees with no fees at all.</p>
                 </div>
                 <div class="service-card ui">
                     <h3>Motivational Quotes</h3>
@@ -45,27 +48,22 @@
                     <p>Our customers can reach us day and night for technical assistance and support.</p>
                 </div>
                 <div class="service-card front-end">
-                    <h3>Consult in your native language</h3>
+                    <h3>Native Language</h3>
                     <p>We offer consultations online with the best experts speaking in your native language</p>
                 </div>
                 <div class="service-card ux">
                     <i class="fas fa-american-sign-language-interpreting"></i>
-                    <h3>Online Consulting</h3>
-                    <p>Normally, let's say legal advice would cost yo hundreds of pounds. Online consulting is the
-                        cheapest way to get an advice wherever you are in minutes.</p>
+                    <h3> Business ? </h3>
+                    <p> Contact us if you have any additional options you think it can be helpful to add. We're always open to new opinions. </p>
                 </div>
-                <div class="service-card ui">
-                    <h3>Free Platform</h3>
-                    <p>We offer free of charge registration and there are no hidden fees. Customers pay directly to the
-                        service provider.</p>
+
+                <div class="service-card front-end">
+                    <h3> Download The app </h3>
+                    <p>Download the application and benifit from a 100 per cent performant app.</p>
                 </div>
                 <div class="service-card interaction">
                     <h3>Contact Us At Anytime</h3>
                     <p>You can contact us anytime during the day.</p>
-                </div>
-                <div class="service-card front-end">
-                    <h3>Free Books</h3>
-                    <p>Get free books that will help you develop certain skills.</p>
                 </div>
             </div>
         </div>
@@ -77,28 +75,28 @@
                 <figure class="snip1533">
                     <figcaption>
                         <blockquote>
-                            <p>I Had a very great experience with Bridge to IT, I found my pation and decided my future.</p>
+                            <p>I Had a very great experience with Emploda, It was really helpful as a management application.</p>
                         </blockquote>
                         <h3>Soumaya Elasri</h3>
-                        <h4>Software Engineer Student</h4>
+                        <h4>Founder of ATLAS</h4>
                     </figcaption>
                 </figure>
                 <figure class="snip1533">
                     <figcaption>
                         <blockquote>
-                            <p>Thank you BRIDGETOIT for everything! I'll be always Grateful!</p>
+                            <p>Thank you EMploda for everything! I'll be always Grateful! The application helped me organize my team.</p>
                         </blockquote>
                         <h3>Mohammed Saadi</h3>
-                        <h4>Data Analysist Freelancer</h4>
+                        <h4>Co-founder of QDM</h4>
                     </figcaption>
                 </figure>
                 <figure class="snip1533">
                     <figcaption>
                         <blockquote>
-                            <p>Was one of the greatest Experience I ever had!</p>
+                            <p>Great App, Much efforts were put there! It's very seccured and the support is great. Much appreciated.</p>
                         </blockquote>
                         <h3>Rim Laaroussi</h3>
-                        <h4>Full-stack Development Student</h4>
+                        <h4> CEO at Plada Sarl </h4>
                     </figcaption>
                 </figure>
         </section>

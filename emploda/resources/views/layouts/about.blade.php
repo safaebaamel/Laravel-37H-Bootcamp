@@ -4,11 +4,11 @@
             <div class="col-md-6">
                 <div class="left-text">
                     <h4>New offers just arrived,<br>Get it now and take profit.</h4>
-                    <p>Gochujang pitchfork post-ironic hammock kombucha fanny pack cronut. Raw denim chicharrones
-                        semiotics af truffaut pinterest. Distillery letterpress authentic adaptogen. Meditation schlitz
-                        humblebrag photo booth celiac cliche chartreuse.<br><br>Pinterest 90's wolf celiac dreamcatcher
-                        listicle deep v semiotics. Intelligentsia literally meggings trust fund put a bird on it.
-                        Shoreditch crucifix artisan pug shaman twee. Health goth bicycle rights retro iPhone.</p>
+                    <p>Emploda is a free Employee Management System Application Written by experienced developers. The team is
+                        composed of 3 senior Developers. The App is highly secured, tested and deployed under the maintenance of te production team.<br><br> Amploda is your
+                        chance to start organizing your workflow. We had so many favorable returns from many who tried Emploda. As the name mentions, It's an application with many features that
+                        would save your entore business.
+                       </p>
                     <ul>
                         <li>
                             <div class="white-button bg-light p-3 rounded-pill" >
@@ -17,7 +17,7 @@
                         </li>
                         <li>
                             <div class="primary-button bg-light p-3 rounded-pill">
-                                <a href="#" id="btn-abt">Purchase Now</a>
+                                <a href="#contact" id="btn-abt">Contact Us</a>
                             </div>
                         </li>
                     </ul>
@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2 class="text-center">What We Do</h2>
+                    <h2 class="text-center">What We Do ?</h2>
                     <div class="line-dec"></div>
                 </div>
             </div>
@@ -44,29 +44,29 @@
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item first-service">
-                    <h4>Easy Customizations</h4>
-                    <p>Meteor is free HTML website template by Tooplate. Feel free to use this layout for your project.
+                    <h4>Easy Use of The App</h4>
+                    <p> Emploda is user fiendly, any user can easily understand and use it. Fell free to test and<br> download.
                     </p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item second-service">
                     <h4>Creative Ideas</h4>
-                    <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke, typewriter.
+                    <p>Our team is open to people's ideas to improve the application. Feel free to contact us at<br> anytime.
                     </p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item third-service">
-                    <h4>Good Profit</h4>
-                    <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke, typewriter.
+                    <h4>No fees At All</h4>
+                    <p>Amploda is hundred per cent free. Feel free to test and use the application. No further Fees to pay.
                     </p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="service-item fourth-service">
                     <h4>Open To Public</h4>
-                    <p>Biodiesel schltz suculents phone cliche ramps snackwave coloring book tumeric poke, typewriter.
+                    <p>Emploda is open to any kind of business Employee management. Feel free to discover.
                     </p>
                 </div>
             </div>
