@@ -8,6 +8,7 @@
                         <div class="sb-nav-link-icon"><i class="fas fa-address-book"></i></div>
                         Dashboard
                     </a>
+                    @if (session('is_admin') == 1)
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
                         aria-expanded="false" aria-controls="collapseLayouts">
@@ -72,6 +73,7 @@
                             <a class="nav-link" href="{{ route('permissions.index') }}"> View </a>
                         </nav>
                     </div>
+                    @endif
                     <div class="sb-sidenav-menu-heading">Others</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutss"
                         aria-expanded="false" aria-controls="collapseLayouts">
@@ -83,7 +85,10 @@
                         data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="{{ route('leaves.create') }} "> Create </a>
+                            @if (session('is_admin') == 1)
+
                             <a class="nav-link" href="{{ route('leaves.index') }}"> Approve/Reject </a>
+                            @endif
                         </nav>
                     </div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsss"

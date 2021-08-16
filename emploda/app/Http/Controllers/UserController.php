@@ -43,7 +43,7 @@ class UserController extends Controller
             'email' => 'required|unique:users|string',
             'address' => 'required',
             'mobile_number' => 'required',
-            'password' => 'required|min:8',
+            'password' => 'required|min:8|max:20',
             'department_id' => 'required',
             'role_id' => 'required',
             'start_from' => 'required',
@@ -59,6 +59,7 @@ class UserController extends Controller
             $image = 'avatar2.png';
         }
         $data['image'] = $image;
+        $data['is_admin'] = 0;
         $data['password'] = bcrypt($request->password);
         User::create($data);
         return redirect()->back()->with('status', 'User Created Successfully!');
